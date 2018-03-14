@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color="{{pointcolor}}">
+  <block wx:for="{{imgUrls}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{item.imgurl}}" class="slide-image" style="width:100%;height:100%;" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="page"> 
+    <view class="page__bd">
+        <view class="weui-grids">
+            <block wx:for="{{grids}}" wx:key="name">
+                <navigator url="/pages/record/record?title={{item.name}}" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="{{item.img}}" />
+                    <view class="weui-grid__label">{{item.name}}</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>

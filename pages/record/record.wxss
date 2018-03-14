@@ -1,0 +1,56 @@
+@import '/style/table.wxss';
+.smallRedball {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    background-color: #FD2F41;
+    border: 1px #FD2F41 solid;
+    font-size: 12px;
+    font-style: normal;
+    border-radius: 24px;
+    margin-right: 6px;
+}
+.miniRedball {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color: #FD2F41;
+    border: 1px #FD2F41 solid;
+    font-size: 0.5rem;
+    font-style: normal;
+    border-radius: 100%;
+    margin-right: 2px;
+}
+.smallBlueball {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    background-color: #2F8BFD;
+    border: 1px #2F8BFD solid;
+    font-size: 12px;
+    font-style: normal;
+    border-radius: 24px;
+}
+.miniBlueball {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #fff;
+    background-color: #2F8BFD;
+    border: 1px #2F8BFD solid;
+    font-size: 0.5rem;
+    font-style: normal;
+    border-radius: 100%;
+    margin-right: 2px;
+}

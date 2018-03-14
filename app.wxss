@@ -1,0 +1,115 @@
+/**app.wxss**/
+@import 'style/weui.wxss';
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+.ballbox{
+  align-items: center;
+}
+.redBallBox {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    color: #FD2F41;
+    background-color: #fff;
+    border: 1px #FD2F41 solid;
+    font-size: 0.8rem;
+    font-style: normal;
+    border-radius: 100%;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+.redBallMini {
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    text-align: center;
+    color: #FD2F41;
+    background-color: #fff;
+    border: 1px #FD2F41 solid;
+    font-size: 0.7rem;
+    font-style: normal;
+    border-radius: 100%;
+    margin-right: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+.redBallBoxactive
+{
+  background-color: #FD2F41;
+  color: #fff;
+}
+.redBallSelect {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    color: #fff;
+    background-color: #FD2F41;
+    border: 1px #FD2F41 solid;
+    font-size: 0.6rem;
+    font-style: normal;
+    border-radius: 100%;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+
+
+.blueBallBox
+{
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    color: #2F8BFD;
+    background-color: #fff;
+    border: 1px #2F8BFD solid;
+    font-size: 0.8rem;
+    font-style: normal;
+    border-radius: 100%;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+.blueBallBoxactive
+{
+  background-color: #2F8BFD;
+  color: #fff;
+}
+.blueBallSelect {
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    color: #fff;
+    background-color: #2F8BFD;
+    border: 1px #2F8BFD solid;
+    font-size: 0.6rem;
+    font-style: normal;
+    border-radius: 100%;
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+.redtext{
+  color: #FD2F41;
+  margin-right:4px;
+}
+.bluetext{
+  color: #2F8BFD;
+  margin-right:4px;
+}
+.btn-space{
+margin-right:10px;
+margin-left:10px;
+}

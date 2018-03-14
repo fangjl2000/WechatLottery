@@ -1,0 +1,39 @@
+
+    <view class="weui-panel">
+      <view class="weui-panel__hd"><text class="redtext">每行至少选择1个</text></view>
+        <view class="weui-panel__bd"> 
+          <view class="weui-media-box weui-media-box_text">
+          <block wx:for="{{redballs}}" wx:key="*this" wx:for-index="groupindex">
+          <view class="ballbox">
+            <block wx:for="{{redballs[groupindex]}}" wx:key="num" wx:for-item="ball">
+                <em data-groupindex="{{groupindex}}" data-num="{{ball.num}}" class="redBallMini redBallBoxactive" wx:if="{{ball.check == 'checked'}}">{{ball.num}}</em>
+                <em data-groupindex="{{groupindex}}" data-num="{{ball.num}}" class="redBallMini " wx:else>{{ball.num}}</em>
+            </block>     
+          </view>  
+          </block>    
+        </view>
+        
+      </view>
+    </view>
+     <view class="weui-form-preview">
+            <view class="weui-form-preview__hd" style='font-size:0.7rem;'>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">获取的幸运码：</view>
+                    <view class="weui-form-preview__value">
+                       <block wx:for="{{selectred}}" wx:key="*this">
+                          <em class="redBallSelect" >{{item}}</em>
+                      </block>
+                      <block wx:for="{{selectblue}}" wx:key="*this">
+                          <em class="blueBallSelect">{{item}}</em>
+                      </block>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd" style='font-size:0.7rem;'>               
+                <view class="weui-form-preview__item" style='text-align: center;'>
+                    <button bindtap="getrandom" class="weui-btn mini-btn" type="primary" size="mini">随机</button>
+                    <button bindtap="Init" class="weui-btn mini-btn btn-space" type="default" size="mini">重置</button>
+                    <button bindtap='copy' class="weui-btn mini-btn" type="warn" size="mini">复制</button>
+                </view>      
+            </view>           
+        </view>

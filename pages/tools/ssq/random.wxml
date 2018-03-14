@@ -1,0 +1,51 @@
+<view class="weui-panel">
+  <view class="weui-panel__hd"><text class="redtext">红球——至少选择{{minred}}个</text></view>
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_text">
+      <view class="ballbox">
+        <block wx:for="{{redballs}}" wx:key="num">
+            <em class="redBallBox redBallBoxactive" wx:if="{{item.check == 'checked'}}">{{item.num}}</em>
+            <em class="redBallBox " wx:else>{{item.num}}</em>
+        </block>     
+      </view>      
+    </view>
+  </view>
+</view>
+<view class="weui-panel" hidden='{{totalblue == 0}}'>
+  <view class="weui-panel__hd"><text class="bluetext">蓝球——至少选择{{minblue}}个</text></view>
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_text">
+      <view class="ballbox">
+        <block wx:for="{{blueballs}}" wx:key="num">
+            <em class="blueBallBox blueBallBoxactive" wx:if="{{item.check == 'checked'}}">{{item.num}}</em>
+            <em class="blueBallBox " wx:else>{{item.num}}</em>
+        </block>     
+      </view>      
+    </view>
+  </view>
+</view>
+ <view class="page__bd">
+ <view class="weui-form-preview">
+            <view class="weui-form-preview__hd" style='font-size:0.7rem;'>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">获取的幸运码：</view>
+                    <view class="weui-form-preview__value">
+                       <block wx:for="{{selectred}}" wx:key="*this">
+                          <em class="redBallSelect" >{{item}}</em>
+                      </block>
+                      <block wx:for="{{selectblue}}" wx:key="*this">
+                          <em class="blueBallSelect">{{item}}</em>
+                      </block>
+                    </view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd" style='font-size:0.7rem;'>               
+                <view class="weui-form-preview__item" style='text-align: center;'>
+                    <button bindtap="getrandom" class="weui-btn mini-btn" type="primary" size="mini">随机</button>
+                    <button bindtap="Init" class="weui-btn mini-btn btn-space" type="default" size="mini">重置</button>
+                    <button bindtap='copy' class="weui-btn mini-btn" type="warn" size="mini">复制</button>
+                </view>      
+            </view>           
+        </view>
+        
+</view>

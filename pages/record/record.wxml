@@ -1,0 +1,96 @@
+<!--pages/record/record.wxml-->
+<view class="weui-panel">
+  <view class="weui-panel__hd">{{title}}开奖结果</view>
+    <view class="weui-panel__bd">
+      <view class="weui-media-box weui-media-box_text">
+      <view class="weui-media-box__title weui-media-box__title_in-text">{{LotteryNo}}</view>
+      <view class="weui-media-box__desc">
+        <block wx:for="{{redball}}" wx:key="*this">
+            <em class="smallRedball">{{item}}</em>
+        </block>
+        <block wx:for="{{blueball}}" wx:key="*this">
+            <em class="smallBlueball">{{item}}</em>
+        </block>    
+      </view>
+      <view class="weui-media-box__info">
+            <view class="weui-media-box__info__meta">{{LotteryTime}}</view>     
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" data-kind="{{item}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);width:{{sliderWidth}}px;"></view>
+            </view>
+           
+
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" >              
+                    <view class="table">
+                      <view class="tr bg-w">
+                        <view class="th" style='width:15%;'>期号</view>
+                        <view class="th" style='width:45%;'>红球</view>
+                        <view class="th" style='width:25%;'>{{kind}}排位</view>
+                        <view class="th" style='width:15%;'>{{kind}}比</view>
+                      </view>
+                      <block wx:for="{{listData}}" wx:key="{{LotteryNo}}">
+                        <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+                          <view class="td" style='width:15%;'>{{item.LotteryNo}}</view>
+                          <view class="td" style='width:45%;'>
+                            <block wx:for="{{item.Balls}}" wx:key="*this">
+                                <em class="miniRedball">{{item}}</em>
+                            </block>
+                          </view>
+                          <view class="td" style='width:25%;'>
+                               <view hidden="{{kind != '大小'}}">{{item.DXGrid}}</view>
+                               <view hidden="{{kind != '奇偶'}}">{{item.JOGrid}}</view>
+                               <view hidden="{{kind != '质合'}}">{{item.ZHGrid}}</view>
+                          </view>
+                          <view class="td" style='width:15%;'>
+                               <view hidden="{{kind != '大小'}}">{{item.DXRatio}}</view>
+                               <view hidden="{{kind != '奇偶'}}">{{item.JORatio}}</view>
+                               <view hidden="{{kind != '质合'}}">{{item.ZHRatio}}</view>
+                          </view>
+                        </view>
+                        <view class="tr" wx:else>
+                          <view class="td" style='width:15%;'>{{item.LotteryNo}}</view>
+                          <view class="td" style='width:45%;'>
+                            <block wx:for="{{item.Balls}}" wx:key="*this">
+                                <em class="miniRedball">{{item}}</em>
+                            </block>
+                          </view>
+                          <view class="td" style='width:25%;'>
+                               <view hidden="{{kind != '大小'}}">{{item.DXGrid}}</view>
+                               <view hidden="{{kind != '奇偶'}}">{{item.JOGrid}}</view>
+                               <view hidden="{{kind != '质合'}}">{{item.ZHGrid}}</view>
+                          </view>
+                          <view class="td" style='width:15%;'>
+                               <view hidden="{{kind != '大小'}}">{{item.DXRatio}}</view>
+                               <view hidden="{{kind != '奇偶'}}">{{item.JORatio}}</view>
+                               <view hidden="{{kind != '质合'}}">{{item.ZHRatio}}</view>
+                          </view>
+                        </view>
+                      </block>
+                      <view class="weui-loadmore" hidden="{{state != 'loadmore'}}">
+                          <view class="weui-loading"></view>
+                          <view class="weui-loadmore__tips">正在加载</view>
+                      </view>
+                      <view class="weui-loadmore weui-loadmore_line" hidden="{{state != 'end'}}">
+                          <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+                      </view>
+                    </view>
+                </view>               
+            </view>
+              
+        </view>
+    </view>
+</view>

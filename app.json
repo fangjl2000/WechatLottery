@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/record/record",
+    "pages/tools/list",
+    "pages/tools/ssq/calculator",
+    "pages/tools/qxc/calculator",
+    "pages/tools/ssq/random",
+    "pages/tools/qxc/random"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#FF3E50",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "彩票分析小助手",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/bot-icon-home2@2x.png",
+        "selectedIconPath": "/images/bot-icon-home@2x.png"
+      },
+      {
+        "pagePath": "pages/tools/list",
+        "text": "工具",
+        "iconPath": "/images/bot-icon-set2@2x.png",
+        "selectedIconPath": "/images/bot-icon-set@2x.png"
+      }
+    ],
+    "selectedColor": "#FF3E50"
+  }
+}
